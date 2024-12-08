@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="InventoryController">
+    <children>
+        <TableView fx:id="albumTable" layoutX="10" layoutY="10" prefHeight="200" prefWidth="480">
+            <columns>
+                <TableColumn fx:id="colAlbumName" text="Album Name" />
+                <TableColumn fx:id="colArtist" text="Artist" />
+                <TableColumn fx:id="colTotal" text="Total" />
+                <TableColumn fx:id="colAvailable" text="Available" />
+            </columns>
+        </TableView>
+        <Label text="Album Name:" layoutX="10" layoutY="220" />
+        <TextField fx:id="tfAlbumName" layoutX="100" layoutY="220" prefWidth="200" />
+        <Label text="Artist:" layoutX="10" layoutY="260" />
+        <TextField fx:id="tfArtist" layoutX="100" layoutY="260" prefWidth="200" />
+        <Label text="Total:" layoutX="10" layoutY="300" />
+        <TextField fx:id="tfTotal" layoutX="100" layoutY="300" prefWidth="200" />
+        <Label text="Available:" layoutX="10" layoutY="340" />
+        <TextField fx:id="tfAvailable" layoutX="100" layoutY="340" prefWidth="200" />
+        <Button text="Tambah" layoutX="320" layoutY="220" onAction="#handleAdd" />
+        <Button text="Hapus" layoutX="320" layoutY="260" onAction="#handleDelete" />
+        <Button text="Update" layoutX="320" layoutY="300" onAction="#handleUpdate" />
+        <Button text="Rent Selected" layoutX="320" layoutY="340" onAction="#handleRent" />
+    </children>
+</AnchorPane>
